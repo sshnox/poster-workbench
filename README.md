@@ -105,7 +105,7 @@ Text editing, PNG download, and the gradient fallback were verified during setup
 
 ## Author and acknowledgments
 
-Built and maintained by **Shoaib Shah** ([sshnox](https://github.com/sshnox)). Developed with AI assistance.
+Built and maintained by **Shoaib Shah** ([sshnox](https://github.com/sshnox)).
 
 html2canvas is provided by its contributors under the MIT license. DM Sans is used under its own font license. See `RESOURCES.md` for the source and dependency links.
 
