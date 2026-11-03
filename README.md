@@ -87,7 +87,7 @@ For export, the app waits for fonts, captures the composition with html2canvas, 
 
 ## Deployment
 
-GitHub Pages publishes the root of the `main` branch. Changes pushed to `main` are automatically redeployed. The editor is public; the source repository is currently private.
+GitHub Pages publishes the root of the `main` branch. Changes pushed to `main` are automatically redeployed. Both the repository and the live site are public.
 
 ## Privacy and limitations
 
