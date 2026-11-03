@@ -70,21 +70,18 @@ The output follows your browser's viewport rather than a fixed print size or soc
 
 ## Project structure
 
-```text
-poster-workbench/
-├── index.html            # Editor, shader, fallback, and PNG export
-├── README.md
-├── RESOURCES.md          # Source and dependency references
-├── .nojekyll             # Static GitHub Pages publishing
-└── reference/
-    └── original.html     # Original HTML from the source conversation
-```
+| File | Purpose |
+| --- | --- |
+| `index.html` | Poster editor, shader, fallback, and PNG export. |
+| `RESOURCES.md` | Third-party dependencies and licenses. |
+| `README.md` | Setup, usage, and project overview. |
+| `.nojekyll` | Static GitHub Pages publishing. |
 
 ## How it works
 
 The title and body are editable HTML elements. Three color inputs feed the shader's color uniforms. Where WebGL is unavailable, the same inputs update a CSS gradient instead.
 
-The shader uses layered value noise to create a slowly changing background. It is an approximation supplied by the original conversation, not a verified copy of DeepSeek's official shader or visual identity.
+The shader uses layered value noise to create a slowly changing fluid background.
 
 For export, the app waits for fonts, captures the composition with html2canvas, encodes it as a PNG, and starts a browser download.
 
@@ -96,7 +93,7 @@ GitHub Pages publishes the root of the `main` branch. Changes pushed to `main` a
 
 Poster text and colors are processed in your browser. There is no app backend or upload service. Third-party requests are made to load the font and export library.
 
-The project is a standalone web app. It does not install into DeepSeek Harness or add controls to another application's conversation interface.
+The project runs independently as a standalone browser editor.
 
 Text editing, PNG download, and the gradient fallback were verified during setup. The animated WebGL shader remains unverified in the cloud browser.
 
@@ -108,7 +105,7 @@ Text editing, PNG download, and the gradient fallback were verified during setup
 
 ## Author and acknowledgments
 
-Built and maintained by **Shoaib Shah** ([sshnox](https://github.com/sshnox)). I developed this project with AI assistance, starting from [this DeepSeek conversation](https://chat.deepseek.com/share/189c22gt33w1sizvcf), and adapted it into a working browser editor.
+Built and maintained by **Shoaib Shah** ([sshnox](https://github.com/sshnox)). Developed with AI assistance.
 
 html2canvas is provided by its contributors under the MIT license. DM Sans is used under its own font license. See `RESOURCES.md` for the source and dependency links.
 
