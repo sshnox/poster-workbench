@@ -481,11 +481,17 @@
           height: window.innerHeight,
           useCORS: true,
           allowTaint: false,
-        }).then(canvas => {
+        }).then(async canvas => {
+          const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+          if (!blob) throw new Error('PNG encoding failed');
+          const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.download = 'poster-everything-is-a-plugin.png';
-          link.href = canvas.toDataURL('image/png');
+          link.href = url;
+          document.body.appendChild(link);
           link.click();
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 60000);
         });
         } catch (err) {
           console.error('Download failed:', err);
